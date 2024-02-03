@@ -15,7 +15,7 @@ Arguably the simplest method.
 Whenever there is a collision, all items are re-hashed with a separate seed. 
 Repeat until there are no more collisions. 
 If it fails to find a seed without a collision after ~100 attempts, the table’s size is double. 
-Guaranteed worst-case $`O{(1)}`$ search and deletion, but with expensive adding.
+Guaranteed worst-case $`O{(1)}`$ search and deletion, but with expensive insertion.
 
 **NOTE: Not working properly. Gets stuck in an infinite loop with modest input sizes**
 
@@ -36,9 +36,9 @@ Insertion is a much cheaper than the above perfect strategy, but given the two p
 A form of open addressing where the distance to their original bucket is minimized on average by "taking from the rich". 
 
 Works by having all items store their offset to the bucket they were originally hashed to. 
-When a new item is added but there is a collision, it keeps searching adjacent buckets until either an open bucket is found, or another item has a lesser offset. 
+When a new item is inserted but there is a collision, it keeps searching adjacent buckets until either an open bucket is found, or another item has a lesser offset. 
 The item to add is exchanged with the lesser offset one, and the process is repeated. 
-This minimizes the average distance from the original bucket, allowing for relatively fast lookup, deletion, and adding, even with a very high load factor.
+This minimizes the average distance from the original bucket, allowing for relatively fast lookup, deletion, and insertion, even with a very high load factor.
 
 # Additional
 ### Statistical measuring
