@@ -44,7 +44,7 @@ This minimizes the average distance from the original bucket, allowing for relat
 ### Statistical measuring
 *Files: `hashFunction_compare.c` & `hashFunction_compare_OLD.py`*
 
-Measures how well distributed different hash function are.
+Measures how well distributed different hash functions are.
 
 ## Bloom filters
 *File: `Bloomfilter.py`*
