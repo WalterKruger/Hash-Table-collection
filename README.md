@@ -60,4 +60,4 @@ A lot more memory efficient than a hash table with similar performance, because 
 
 Has the ability count the number of occurrences of a each item.
 This specific implementation will dynamically re-size the structure to prevent buckets from overflowing.
-Uses a larger, intermediate type to store bucket values when performing compressions.
+Uses a larger, intermediate type to store bucket values when performing comparisons.
